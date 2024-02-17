@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+    stages {
+        stage('Run Docker Hello-World') {
+            steps {
+                script {
+                    docker.run('hello-world')
+                }
+            }
+        }
+    }
+}
